@@ -17,12 +17,12 @@ colnames(data) <- c("series","y","x")
 #remove . from column names
 colnames(data) <- sapply(colnames(data), gsub, pattern="\\.", replacement="")
 
-p2 <- nvd3Plot(y ~ x,
+n2 <- nvd3Plot(y ~ x,
                group = "series",
                data = data,
                type = "scatterChart")
-p2$chart(showDistX = TRUE)
-p2$chart(showDistY = TRUE)
+n2$chart(showDistX = TRUE)
+n2$chart(showDistY = TRUE)
 #tooltip behavior is odd in this model so leave magnify on even though I do not like it
-p2$chart(showControls = TRUE)
-p2
+n2$chart(showControls = TRUE)
+n2
