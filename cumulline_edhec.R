@@ -22,15 +22,15 @@ i <- sapply(edhec.melt, is.factor)
 edhec.melt[i] <- lapply(edhec.melt[i], gsub, pattern="\\.", replacement="")
 
 #get date in format that nvd3 likes
-#edhec.melt$date <- as.double(as.POSIXct(as.Date(edhec.melt$date),origin="1970-01-01"))
+#edhec.melt$date <- as.double(as.POSIXct(as.Date(edhec.melt$date),origin="1970-01-01")) * 1000
 #edhec.melt$date <- format(edhec.melt$date,"%Y-%m-%d")
 
-n1 <- nvd3Plot(value ~ date,
+n1 <- nvd3Plot(y = "value",
+               x = "date",
                group = "indexname",
                data = edhec.melt,
                type = "cumulativeLineChart")
 n1$chart(showControls = FALSE) 
-#n1$xAxis(tickFormat='#!function(d) {
-#               return d3.time.format("%Y-%m-%d")(new Date(d))
-#             });!#')
+n1$xAxis(tickFormat='#!function(d) {return d3.time.format("%Y-%m-%d")(new Date(d));}!#') #.parse(d);}!#')
+n1$yAxis(tickFormat = '#!function(d) {return d3.format(",.1%")(d)}!#')
 n1
