@@ -22,8 +22,7 @@ i <- sapply(edhec.melt, is.factor)
 edhec.melt[i] <- lapply(edhec.melt[i], gsub, pattern="\\.", replacement="")
 
 #get date in format that nvd3 likes
-#edhec.melt$date <- as.double(as.POSIXct(as.Date(edhec.melt$date),origin="1970-01-01")) * 1000
-#edhec.melt$date <- format(edhec.melt$date,"%Y-%m-%d")
+edhec.melt$date <- as.double(as.POSIXct(as.Date(edhec.melt$date),origin="1970-01-01")) * 1000
 
 n1 <- nvd3Plot(y = "value",
                x = "date",
