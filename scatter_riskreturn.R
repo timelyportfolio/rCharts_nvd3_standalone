@@ -23,5 +23,6 @@ p2 <- nvd3Plot(y ~ x,
                type = "scatterChart")
 p2$chart(showDistX = TRUE)
 p2$chart(showDistY = TRUE)
-p2$chart(showControls = FALSE)
+#tooltip behavior is odd in this model so leave magnify on even though I do not like it
+p2$chart(showControls = TRUE)
 p2
