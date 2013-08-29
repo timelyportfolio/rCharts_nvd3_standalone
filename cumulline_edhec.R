@@ -30,6 +30,6 @@ n1 <- nvd3Plot(y = "value",
                data = edhec.melt,
                type = "cumulativeLineChart")
 n1$chart(showControls = FALSE) 
-n1$xAxis(tickFormat='#!function(d) {return d3.time.format("%Y-%m-%d")(new Date(d));}!#') #.parse(d);}!#')
-n1$yAxis(tickFormat = '#!function(d) {return d3.format(",.1%")(d)}!#')
+n1$xAxis(tickFormat="#!function(d) {return d3.time.format('%Y-%m-%d')(new Date(d));}!#") #.parse(d);}!#")
+n1$yAxis(tickFormat = "#!function(d) {return d3.format(',.1%')(d)}!#")
 n1
