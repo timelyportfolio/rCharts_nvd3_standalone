@@ -6,13 +6,12 @@
      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
     <link rel='stylesheet' href="http://twitter.github.io/bootstrap/assets/js/google-code-prettify/prettify.css">
     <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
-    <link rel='stylesheet' href='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/css/nv.d3.css'>
-    <link rel='stylesheet' href='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/css/rNVD3.css'>
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
     
-    <script src='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/js/jquery-1.8.2.min.js' type='text/javascript'></script>
-    <script src='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/js/d3.v3.min.js' type='text/javascript'></script>
-    <script src='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
-    <script src='C:/Program Files/R/R-3.0.1/library/rCharts/libraries/nvd3/js/fisheye.js' type='text/javascript'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v2.min.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/nv.d3.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
     
     <style>
     .rChart {
@@ -34,7 +33,7 @@
       <div class='row'>
         <div class='span8'>
           <div class="bs-docs-example">
-            <div id='chart262825101619' class='rChart nvd3Plot nvd3'></div>
+            <div id='chart26283b287cc1' class='rChart nvd3Plot nvd3'></div>
           <br/>
 <pre><code class='r'>require(quantmod)
 require(rCharts)
@@ -69,18 +68,18 @@ n1
       
     <script type='text/javascript'>
  $(document).ready(function(){
-      drawchart262825101619()
+      drawchart26283b287cc1()
     });
-    function drawchart262825101619(){  
+    function drawchart26283b287cc1(){  
       var opts = {
- "dom": "chart262825101619",
+ "dom": "chart26283b287cc1",
 "width":    700,
 "height":    400,
 "x": "date",
 "y": "close",
 "y2": "volume",
 "type": "linePlusBarChart",
-"id": "chart262825101619" 
+"id": "chart26283b287cc1" 
 },
         data = [
  {
